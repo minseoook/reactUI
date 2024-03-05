@@ -1,7 +1,12 @@
 import "./App.css";
+import Accordian from "./components/accordian";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Accordian />
+    </>
+  );
 }
 
 export default App;
