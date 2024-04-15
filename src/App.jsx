@@ -10,6 +10,7 @@ import ScrollIndicator from "./components/scroll-indicator";
 import SearchAutoComplete from "./components/search-autocomplete";
 import Tab from "./components/tab";
 import TabTest from "./components/tab/tab-test";
+import UseWindowResizeTest from "./components/windowResize/test";
 
 function App() {
   return (
@@ -23,7 +24,8 @@ function App() {
       {/* <Modaltest /> */}
       {/* <SearchAutoComplete /> */}
       {/* <UseFetchHookTest /> */}
-      <UseOnclickOutSideTest />
+      {/* <UseOnclickOutSideTest /> */}
+      <UseWindowResizeTest />
     </div>
   );
 }
