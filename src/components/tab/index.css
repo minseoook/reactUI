@@ -17,12 +17,12 @@
   cursor: pointer;
   border: none;
   color: #fff;
-  background: #4e016a;
+  background: skyblue;
 }
 
 .tab-item.active {
   border-color: #000;
-  background: #a1d600;
+  background: blue;
   color: #fff;
 }
 
