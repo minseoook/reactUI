@@ -1,5 +1,6 @@
 import "./App.css";
 import Accordian from "./components/accordian";
+import UseOnclickOutSideTest from "./components/clickoutside/test";
 import UseFetchHookTest from "./components/fetch/test";
 import ImageSlider from "./components/imageSlider";
 import LightDarkMode from "./components/light-dark-mode";
@@ -21,7 +22,8 @@ function App() {
       {/* <TabTest /> */}
       {/* <Modaltest /> */}
       {/* <SearchAutoComplete /> */}
-      <UseFetchHookTest />
+      {/* <UseFetchHookTest /> */}
+      <UseOnclickOutSideTest />
     </div>
   );
 }
