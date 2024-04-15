@@ -1,5 +1,6 @@
 import "./App.css";
 import Accordian from "./components/accordian";
+import UseFetchHookTest from "./components/fetch/test";
 import ImageSlider from "./components/imageSlider";
 import LightDarkMode from "./components/light-dark-mode";
 import LoadMoreButton from "./components/loadMoreButton";
@@ -19,7 +20,8 @@ function App() {
       {/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
       {/* <TabTest /> */}
       {/* <Modaltest /> */}
-      <SearchAutoComplete />
+      {/* <SearchAutoComplete /> */}
+      <UseFetchHookTest />
     </div>
   );
 }
