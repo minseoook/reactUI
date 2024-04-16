@@ -10,7 +10,7 @@
 
 .acc-wrapper button {
   padding: 10px 20px;
-  background: skyblue;
+  background: #614101;
   color: #fff;
   font-weight: bold;
   font-size: 20px;
@@ -22,7 +22,7 @@
 }
 
 .item {
-  background: skyblue;
+  background: #614101;
   margin-bottom: 10px;
   padding: 10px 20px;
 }

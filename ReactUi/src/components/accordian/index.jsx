@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import data from "./data";
-import "./styles.css";
+import "./index.css";
 
 export default function Accordian() {
   const [selected, setSelected] = useState(null);
@@ -11,7 +11,7 @@ export default function Accordian() {
   const [multiple, setMultiple] = useState([]);
 
   function handleSingleSelection(getCurrentId) {
-    setSelected(getCurrentId === selected ? null : getCurrentId); //눌렀던거 다시 없애기
+    setSelected(getCurrentId === selected ? null : getCurrentId);
   }
 
   function handleMultiSelection(getCurrentId) {
@@ -33,8 +33,8 @@ export default function Accordian() {
       </button>
       <div className="accordian">
         {data && data.length > 0 ? (
-          data.map((dataItem) => (
-            <div className="item" key={dataItem.id}>
+          data.map((dataItem, i) => (
+            <div className="item" key={i}>
               <div
                 onClick={
                   enableMultiSelection
@@ -53,6 +53,10 @@ export default function Accordian() {
                 : selected === dataItem.id && (
                     <div className="acc-content ">{dataItem.answer}</div>
                   )}
+              {/* {selected === dataItem.id ||
+              multiple.indexOf(dataItem.id) !== -1 ? (
+                <div className="content">{dataItem.answer}</div>
+              ) : null} */}
             </div>
           ))
         ) : (
