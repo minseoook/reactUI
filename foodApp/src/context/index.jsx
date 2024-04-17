@@ -43,7 +43,7 @@ export default function GlobalState({ children }) {
     }
 
     setFavoritesList(cpyFavoritesList);
-  }
+  } //컨텍스트
 
   return (
     <GlobalContext.Provider
