@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Pagination from ".";
+import "./index.css";
 
 function PaginationTest() {
   const dummyData = Array.from({ length: 100 }, (_, index) => ({
@@ -22,7 +23,6 @@ function PaginationTest() {
 
   return (
     <div>
-      <h1>Pagination</h1>
       <ul className="list-items">
         {currentListOfItems.map((listItem) => (
           <li key={listItem.id}>{listItem.name}</li>
