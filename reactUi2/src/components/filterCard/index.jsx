@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./index.css";
 
 function FilterProducts() {
@@ -30,7 +30,7 @@ function FilterProducts() {
   }, []);
 
   useEffect(() => {
-    setFilteredItems((prevProducts) => {
+    setFilteredItems(() => {
       if (!currentSelectedCategory) return products;
       return products.filter(
         (productItem) =>
