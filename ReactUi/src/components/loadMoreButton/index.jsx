@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./index.css";
-
+// 더보기 버튼으로 상품을 계속 fetch해야함
+// 일단 상태를 생각해야하는데 count를 만듬
+// count가 올라가면 페치를 한번더 해서 이후 페이지 내용을 받아온다
+// 그럼 배열을 이전거랑 합쳐서 products상태를 만든다
+// 그러면 상품들이 쭉 나열된다
 const LoadMoreButton = () => {
   const [loading, setLoading] = useState(false);
   const [products, setProducts] = useState([]);
