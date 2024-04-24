@@ -3,6 +3,7 @@ import DebounceApiCall from "./components/debounce";
 import FilterCard from "./components/filterCard";
 import FormValidation from "./components/formValid";
 import PaginationTest from "./components/pagination/test";
+import SortData from "./components/sortData";
 import TooltipTest from "./components/tooltip/test";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <FilterCard />
       <FormValidation />
       <DebounceApiCall />
+      <SortData />
     </>
   );
 }
