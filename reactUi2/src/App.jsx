@@ -1,4 +1,5 @@
 import "./App.css";
+import DebounceApiCall from "./components/debounce";
 import FilterCard from "./components/filterCard";
 import FormValidation from "./components/formValid";
 import PaginationTest from "./components/pagination/test";
@@ -11,6 +12,7 @@ function App() {
       <TooltipTest />
       <FilterCard />
       <FormValidation />
+      <DebounceApiCall />
     </>
   );
 }
