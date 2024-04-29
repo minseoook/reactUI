@@ -1,21 +1,11 @@
 import { useEffect, useState } from "react";
 import "./index.css";
-const ScrollIndicator = ({ url }) => {
-  const [date, setDate] = useState([]);
-  const [scrollpercentage, setScrollpercentage] = useState(0);
+// 일단 상태는 하나 그건 바로 스크롤 될때마다 변하는 상태값
+// 이벤트 리스너를 만들어서 스크롤될때마다 상태값 변경
+// 그럼 변하는 상태값을 css로 넘겨서 width를 증가시킨다
 
-  const fetchData = async () => {
-    try {
-      const res = await fetch(url);
-      const data = await res.json();
-      setDate(data.products);
-    } catch (e) {
-      console.log(e);
-    }
-  };
-  useEffect(() => {
-    fetchData(url);
-  }, [url]);
+const ScrollIndicator = () => {
+  const [scrollpercentage, setScrollpercentage] = useState(0);
 
   const handleScroll = () => {
     console.log(
@@ -51,12 +41,6 @@ const ScrollIndicator = ({ url }) => {
             style={{ width: `${scrollpercentage}%` }}
           ></div>
         </div>
-      </div>
-
-      <div className="data-container">
-        {date.map((data) => (
-          <p key={data.id}>{data.title}</p>
-        ))}
       </div>
     </div>
   );

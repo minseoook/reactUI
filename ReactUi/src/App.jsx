@@ -20,7 +20,7 @@ function App() {
       <ImageSlider url={"https://picsum.photos/v2/list"} />
       <LoadMoreButton />
       <LightDarkMode />
-      <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+      <ScrollIndicator />
       <TabTest />
       <Modaltest />
       <SearchAutoComplete />
