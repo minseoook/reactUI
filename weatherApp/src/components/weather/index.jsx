@@ -29,11 +29,9 @@ const Weather = () => {
       fetchdata(search);
     }
   };
-  console.log(data);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      console.log("이펙트");
       handleFetchData();
     }, 1000); // 1000ms(1초) 후에 실행되도록 설정
 
@@ -41,7 +39,6 @@ const Weather = () => {
   }, [search]);
 
   useEffect(() => {
-    console.log("이펙트");
     fetchdata("seoul");
   }, []);
 
