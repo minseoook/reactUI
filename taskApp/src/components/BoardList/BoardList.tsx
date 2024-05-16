@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTypedSelector } from "../../hooks/redux";
 import SideForm from "./SideForm/SideForm";
 import { FiPlusCircle } from "react-icons/fi";
@@ -20,7 +20,12 @@ type Props = {
 const BoardList = ({ activeBoardId, setActiveBoardId }: Props) => {
   const { boardArray } = useTypedSelector((state) => state.board);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
+  const handleClick = () => {
+    setIsFormOpen(!isFormOpen);
+    setTimeout(() => inputRef.current?.focus(), 0);
+  };
   return (
     <div className={container}>
       <div className={title}>게시판 :</div>
@@ -48,12 +53,9 @@ const BoardList = ({ activeBoardId, setActiveBoardId }: Props) => {
       ))}
       <div className={addSection}>
         {isFormOpen ? (
-          <SideForm setIsFormOpen={setIsFormOpen} />
+          <SideForm setIsFormOpen={setIsFormOpen} inputRef={inputRef} />
         ) : (
-          <FiPlusCircle
-            className={addButton}
-            onClick={() => setIsFormOpen(!isFormOpen)}
-          />
+          <FiPlusCircle className={addButton} onClick={handleClick} />
         )}
       </div>
     </div>
